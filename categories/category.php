@@ -3,7 +3,6 @@
 
 <?php
 
-
 if (isset($_GET['cat_id'])) {
     $id = $_GET['cat_id'];
 
@@ -20,11 +19,9 @@ if (isset($_GET['cat_id'])) {
 }
 
 
-
 ?>
 <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-7">
-
         <?php foreach ($rows as $row) : ?>
             <!-- Post preview-->
             <div class="post-preview">
@@ -42,7 +39,6 @@ if (isset($_GET['cat_id'])) {
             <hr class="my-4" />
         <?php endforeach; ?>
         <!-- Pager-->
-
     </div>
 </div>
 
