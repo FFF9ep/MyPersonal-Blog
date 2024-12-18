@@ -13,7 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Fandi Blog - Start Write Your Own Blog</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@ session_start();
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand" href="index.html">Welcome to Fandi Blog</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -39,7 +39,7 @@ session_start();
                     <div class="input-group ps-5">
                         <div id="navbar-search-autocomplete" class="w-100">
                             <form method="POST" action="http://localhost/fandiblog/search.php">
-                                <input name="search" type="search" id="form1" class="form-control mt-3" placeholder="search" />
+                                <input name="search" type="search" id="form1" class="form-control mt-3" placeholder="Search" />
                             </form>
                         </div>
                     </div>

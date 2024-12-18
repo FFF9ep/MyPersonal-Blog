@@ -7,7 +7,6 @@
 if (isset($_GET['post_id'])) {
     $id = $_GET['post_id'];
 
-
     $select = $conn->query("SELECT * FROM posts WHERE id = '$id'");
 
     $select->execute();
@@ -19,10 +18,7 @@ if (isset($_GET['post_id'])) {
 
 if (isset($_POST['submit']) and isset($_GET['post_id'])) {
     //the id of the post and the username for the who posted the comment
-
-
     if ($_POST['comment'] == '') {
-
         echo "<script>alert('Write a comment'); </script>";
     } else {
         $id = $_GET['post_id'];
@@ -39,14 +35,12 @@ if (isset($_POST['submit']) and isset($_GET['post_id'])) {
         ]);
 
         echo "<script>alert('Comment added and it will be fowarded to the admins'); </script>";
-
         //header("location: http://localhost/fandiblog/posts/post.php?post_id=".$id."");
     }
 }
 
 
 //selecting the comments
-
 $comments = $conn->query("SELECT posts.id AS id, 
     comments.id_post_comment AS id_post_comment, comments.user_name_comment 
     AS user_name_comment, comments.comment AS comment, 
@@ -55,10 +49,7 @@ $comments = $conn->query("SELECT posts.id AS id,
     WHERE posts.id = '$id' AND comments.status_comment = 1");
 
 $comments->execute();
-
 $allComments = $comments->fetchAll(PDO::FETCH_OBJ);
-
-
 
 ?>
 <!-- Page Header-->
@@ -84,7 +75,6 @@ $allComments = $comments->fetchAll(PDO::FETCH_OBJ);
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-
                 <p><?php echo $post->body; ?></p>
                 <!-- <p>
                             Placeholder text by
@@ -106,31 +96,22 @@ $allComments = $comments->fetchAll(PDO::FETCH_OBJ);
     <div class="container my-5 py-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 col-lg-10 col-xl-8">
-
                 <h3 class="mb-5">Comments</h3>
                 <?php if (count($allComments) > 0) : ?>
                     <?php foreach ($allComments as $comment) : ?>
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-start align-items-center">
-
                                     <div>
                                         <h6 class="fw-bold text-primary"><?php echo $comment->user_name_comment; ?>
                                             <h8 class="p-3 text-black">(<?php echo date('M', strtotime($comment->created_at))  . ',' .  date('d', strtotime($comment->created_at)) . ' ' . date('Y', strtotime($comment->created_at)); ?>)</h8>
                                         </h6>
-
                                     </div>
                                 </div>
-
                                 <p class="mt-3 mb-4 pb-2">
                                     <?php echo $comment->comment; ?>
                                 </p>
-
-
                                 <hr class="my-4" />
-
-
-
                             </div>
                         <?php endforeach; ?>
                     <?php else : ?>
@@ -139,17 +120,12 @@ $allComments = $comments->fetchAll(PDO::FETCH_OBJ);
                         </div>
                     <?php endif; ?>
                     <?php if (isset($_SESSION['username'])) : ?>
-
                         <form method="POST" action="post.php?post_id=<?php echo $id; ?>">
-
                             <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
-
                                 <div class="d-flex flex-start w-100">
-
                                     <div class="form-outline w-100">
                                         <textarea class="form-control" id="" placeholder="write message" rows="4"
                                             name="comment"></textarea>
-
                                     </div>
                                 </div>
                                 <div class="float-end mt-2 pt-1">

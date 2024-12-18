@@ -1,13 +1,9 @@
 <?php require "../includes/navbar.php"; ?>
-
-
 <?php require "../config/config.php"; ?>
-
 <?php
 
 if (isset($_GET['del_id'])) {
     $id = $_GET['del_id'];
-
     $select = $conn->query("SELECT * FROM posts WHERE id =' $id'");
     $select->execute();
     $posts = $select->fetch(PDO::FETCH_OBJ);
@@ -16,17 +12,11 @@ if (isset($_GET['del_id'])) {
         header('location: http://localhost/fandiblog/index.php');
     } else {
         unlink("images/" . $posts->img . "");
-
-
-
         $delete = $conn->prepare("DELETE FROM posts WHERE id = :id");
         $delete->execute([
             ':id' => $id
         ]);
     }
-
-
-
     header('location: http://localhost/fandiblog/index.php');
 } else {
     header("location: http://localhost/fandiblog/404.php");
