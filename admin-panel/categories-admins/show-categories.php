@@ -5,13 +5,9 @@
 if (!isset($_SESSION['adminname'])) {
   header("location: http://localhost/fandiblog/admin-panel/admins/login-admins.php");
 }
-
-
 $categories = $conn->query("SELECT * FROM categories LIMIT 7");
 $categories->execute();
 $rows = $categories->fetchAll(PDO::FETCH_OBJ);
-
-
 
 ?>
 <div class="row">

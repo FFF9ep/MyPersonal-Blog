@@ -5,8 +5,6 @@
 if (!isset($_SESSION['adminname'])) {
   header("location: http://localhost/fandiblog/admin-panel/admins/login-admins.php");
 }
-
-
 $comments = $conn->query("SELECT posts.id AS id, posts.title AS title, comments.id AS comment_id,
      comments.id_post_comment AS id_post_comment, comments.user_name_comment AS
      user_name_comment, comments.comment AS comment, comments.status_comment
@@ -15,14 +13,12 @@ $comments = $conn->query("SELECT posts.id AS id, posts.title AS title, comments.
     JOIN posts ON posts.id = comments.id_post_comment");
 $comments->execute();
 $rows = $comments->fetchAll(PDO::FETCH_OBJ);
-
 ?>
 <div class="row">
   <div class="col">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title mb-4 d-inline">Comments</h5>
-
         <table class="table">
           <thead>
             <tr>

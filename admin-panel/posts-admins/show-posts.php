@@ -6,7 +6,6 @@ if (!isset($_SESSION['adminname'])) {
   header("location: http://localhost/fandiblog/admin-panel/admins/login-admins.php");
 }
 
-
 $posts = $conn->query("SELECT posts.id AS id, posts.title AS title, 
     posts.user_name AS user_name, categories.name AS name, posts.status AS 
     status FROM categories 
@@ -20,7 +19,6 @@ $rows = $posts->fetchAll(PDO::FETCH_OBJ);
     <div class="card">
       <div class="card-body">
         <h5 class="card-title mb-4 d-inline">Posts</h5>
-
         <table class="table">
           <thead>
             <tr>
