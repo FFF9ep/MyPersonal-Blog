@@ -9,7 +9,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "+07:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
 ;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */
@@ -50,7 +50,7 @@ VALUES (
     'admin1@admin.com',
     'admin1@admin.com',
     '$2y$10$NlbuHlbGxVFbvWxi4vUKh.fkMKbsiKDeY3cBilvy24AHqoq2TQhFC',
-    '2022-09-13 15:47:52'
+    '2024-12-18 07:06:49'
   ),
   (
     2,
@@ -81,9 +81,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `created_at`)
-VALUES (1, 'design-website', '2022-09-11 18:20:49'),
-  (2, 'football', '2022-09-11 18:20:49'),
-  (3, 'tech', '2022-09-11 18:20:49');
+VALUES (1, 'design-website', '2024-12-18 07:06:49'),
+  (2, 'football', '2024-12-18 07:06:49'),
+  (3, 'tech', '2024-12-18 07:06:49');
 -- --------------------------------------------------------
 --
 -- Table structure for table `comments`

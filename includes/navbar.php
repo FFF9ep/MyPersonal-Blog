@@ -56,15 +56,12 @@ session_start();
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="http://localhost/fandiblog/users/profile.php?prof_id=<?php echo $_SESSION['user_id']; ?>">Profile</a></li>
                                 <li><a class="dropdown-item" href="http://localhost/fandiblog/auth/logout.php">logout</a></li>
-
                             </ul>
                         </li>
                     <?php else : ?>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/fandiblog/auth/login.php">login</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/fandiblog/auth/register.php">register</a></li>
-
                     <?php endif; ?>
-
 
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="http://localhost/fandiblog/contact.php">Contact</a></li>
                 </ul>
